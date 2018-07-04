@@ -1,5 +1,8 @@
 {
-  "plugins": [["import", { "libraryName": "antd-mobile", "style": "css" }]]
+  "plugins": [
+    "transform-decorators-legacy",
+    ["import", { "libraryName": "antd-mobile", "style": "css" }]]
+
   /*安装：npm install babel-plugin-import --save-dev
   新建.babelrc文件
   输入文本:{"plugins": [["import", { "libraryName": "antd-mobile", "style": "css" }]]}
