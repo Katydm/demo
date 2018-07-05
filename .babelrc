@@ -1,5 +1,11 @@
 {
+  "compact": false,
+  "ast": false,
+  "sourceMaps": "inline",
+  "highlightCode": true,
+  "presets": ["es2015", "stage-0", "stage-3"],
   "plugins": [
+    ["transform-es2015-modules-amd", {"strict": false}],
     "transform-decorators-legacy",
     ["import", { "libraryName": "antd-mobile", "style": "css" }]]
 
@@ -8,5 +14,10 @@
   输入文本:{"plugins": [["import", { "libraryName": "antd-mobile", "style": "css" }]]}
   重启webpack
   按需加载完成！！！
+  */
+  /*
+  使用装饰器
+  安装npm install babel-plugin-transform-decorators-legacy --save-dev
+  在.babelrc文件里，写上这个plugins”：["transfrom-decorators-legacy"]
   */
 }

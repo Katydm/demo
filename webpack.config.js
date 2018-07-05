@@ -92,7 +92,8 @@ module.exports = {
             filename:'js/base.js',
 
         }),
-        new OpenBrowserPlugin({ url: 'http://localhost:8080' })
+        new OpenBrowserPlugin({ url: 'http://localhost:8080' }),
+
 
         // new webpack.DefinePlugin({
         //     __DEV__: JSON.stringify(JSON.parse((process.env.NODE_ENV == 'dev') || 'false'))

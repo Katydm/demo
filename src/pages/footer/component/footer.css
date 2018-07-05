@@ -1,0 +1,67 @@
+.footer_warp a.active i,.footer_warp a.active span{
+    color:#BA4783;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.footer_warp{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 55px;
+    background: #ffffff;
+}
+
+.footer_warp a{
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.footer_warp  i{
+    color: #A9A9A9;
+    margin: 9px auto 0px;
+}
+.footer a:nth-child(3)>li{
+    position: relative;
+}
+#cart_num{
+    position: absolute;
+    top: -5px;
+    right: -2px;
+    color: white;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 20px;
+}
+.footer_warp  span{
+    font-family: PingFangTC-Regular;
+    font-size: 13px;
+    color: #A9A9A9;
+    letter-spacing: 0.99px;
+    line-height: 18px;
+    text-align: center;
+    display: block;
+}
+.footer li span.special{
+    color: #00b5bc;
+}
+.fa-chevron-left{
+    -webkit-text-stroke: 2px #ffffff;
+}
+.fa-chevron-right,.fa-times{
+    -webkit-text-stroke: 1px #ffffff;
+}
+ul,li,a{
+    list-style: none;
+    text-decoration: none;
+}
+/*.bottomTop{*/
+/*margin-top:55px;*/
+/*}*/
+/*脚步结束*/
