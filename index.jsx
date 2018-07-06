@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from 'pages/home/component/index.jsx';
+import HomeContainers from 'pages/home/containers/index.jsx';
 import { HashRouter as Router ,Route ,Link ,Switch} from 'react-router-dom';
 import thunk from'redux-thunk';//安装redux-thunk中间建,可以处理异步，action可以返回函数
 import {createStore,applyMiddleware,compose} from 'redux';//使用applyMiddleware开启thunk中间件,并管理
@@ -11,7 +11,9 @@ import Register from 'pages/register/component/index.jsx';
 import Header from 'pages/header/component/index.jsx';
 import Footer from 'pages/footer/component/index.jsx';
 import My from 'pages/my/component/index.jsx';
-import createHistory from 'history/createHashHistory'
+import createHistory from 'history/createHashHistory';
+import goodsContainers from "pages/goods/containers/index.jsx";
+
 const store=createStore(counterReducer,compose(
     applyMiddleware(thunk),
     window.devToolsExtension?window.devToolsExtension():f=>f
@@ -25,12 +27,13 @@ const history = createHistory();
 ReactDOM.render(
     (<Provider store={store}>
         <Router history={history}>
-            <div>
+            <div style={{overflow:'hidden',marginBottom:'55px'}}>
                 <Header/>
-                <Route exact path='/' component={Home}/>
-                <Route exact path='/login' component={Login}/>
-                <Route exact path='/register' component={Register}/>
-                <Route exact path='/my' component={My}/>
+                <Route exact path='/' component={HomeContainers}/>
+                <Route  path='/login' component={Login}/>
+                <Route  path='/register' component={Register}/>
+                <Route  path='/my' component={My}/>
+                <Route  path='/goodsContainers/:id' component={goodsContainers}/>
                 <Footer/>
             </div>
         </Router>
